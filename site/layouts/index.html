@@ -1,15 +1,103 @@
 {{ partial "head" . }}
 
-{{ partial "nav" . }}
+  <div class="bsib pl4 pr4">
+    <div class="df fdc aic jcc sh df tac tw10 center pb6">
+      <div class="ffh s4 tal logo mt5 mb5">
+        <span class="round dib pr3 vam">
+          <em aria-hidden="true" class="vam round tcw bgp p2 vam fs4 fa fa-rocket"></em>
+          <span class="fs4 b ml1 vam mt5">React Rocket</span>
+        </span>
+      </div>
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/home/jumbotron.jpg" "title" "Great coffee with a conscience" "subtitle" "Support sustainable farming while enjoying a cup") }}
+      <h1 class="b dib lh3 fs5">
+        Hi, I'm Julian, I build stuff with React
+        <img class="vam" width="100" alt="React Logo" src="react.svg">
+      </h1>
+      <small class="db lh4 fs1 mb6">
+        I'm a Brighton (UK) based JavaScript consultant, and have <span class="highlight">availability from April 2017</span>
+      </small>
 
-{{ partial "short-text" (dict "heading" "Why Kaldi?" "text" "Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities.")}}
+      <div class="mb3">
+        <ul class="tal">
+          <li class="tw5 lh3 fs2 pl7 pr mb3">
+            <em aria-hidden="true" class="l0 pa fa fa-desktop fs5"></em>
+            I help startups and small businesses build <strong>web interfaces that scale</strong>.
+          </li>
 
-{{ partial "2-up" (dict "heading" "What we offer" "description" "Kaldi is the ultimate spot for coffee lovers who want to learn about their java’s origin and support the farmers that grew it. We take coffee production, roasting and brewing seriously and we’re glad to pass that knowledge to anyone." "svg1" "img/illustrations/coffee.svg" "text1" "We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. We’re proud to offer a variety of coffee beans grown with great care for the environment and local communities. Check our post or contact us directly for current availability." "svg2" "/img/illustrations/coffee-gear.svg" "text2" "We offer a small, but carefully curated selection of brewing gear and tools for every taste and experience level. No matter if you roast your own beans or just bought your first french press, you’ll find a gadget to fall in love with in our shop." "buttonText" "See all products" "buttonLink" "/products"  ) }}
+          <li class="tw5 lh3 fs2 pl7 pr mb3">
+            <em aria-hidden="true" class="l0 pa fa fa-mobile fs6 ml1"></em>
+            I build mobile interfaces for <strong>iOS and Android</strong> with  <strong>react native</strong>.
+          </li>
 
-{{ partial "text-and-image" (dict "heading" "Our values" "text" "Coffee is an amazing part of human culture but it has a dark side too – one of colonialism and mindless abuse of natural resources and human lives. We want to turn this around and return the coffee trade to the drink’s exhilarating, empowering and unifying nature." "buttonText" "Read more" "buttonLink" "/about") }}
+          <li class="tw5 lh3 fs2 pl7 pr mb3">
+            <em aria-hidden="true" class="l0 pa fa fa-refresh fs5"></em>
+            I provide hands-on development and consulting to <strong>modernize your legacy JavaScript</strong> codebase.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-{{ partial "blog" . }}
+  <div class="tcw bgp arrow-up df center jcc pt7 pb7">
+    <div class="tw7 f1 pl6 pr6">
+      <h3 class="fs4 mb4 b">A little bit about myself</h3>
+      <ul>
+        <li class="lh2 fs1 mb3">I’ve been contracting as a senior JavaScript developer for startups for over 3 years.</li>
+        <li class="lh2 fs1 mb3"><strong>At Rainforest QA (YC 14)</strong> I scaled a frontend team from 1 to 8 people.</li>
+        <li class="lh2 fs1 mb3">I’ve been developing and maintaining a commercial React-based front-end for 2 years.</li>
+        <li class="lh2 fs1 mb3">I’m speak about nerdy stuff.</li>
+        <li class="lh2 fs1 mb3">I’m an open source contributor.</li>
+        <li class="lh2 fs1 mb3">I have a background in Design (Which can be quite useful when building interfaces).</li>
+        <li class="lh2 fs1 mb2">I’m based in Brighton, UK.</li>
+      </ul>
+    </div>
+    <div class="tw7 f1 pl6 pr6 bl">
+      <h3 class="fs4 mb3 b">Don't be shy!</h3>
+      <p class="fs3 lh3">
+        Say hello! I don’t bite, promise! If I'm not currently online I’ll get back to you asap.
+      </p>
+      <ul class="mt3">
+        <li class="tw5 lh3 fs2 pl5 pr mb3">
+          <em aria-hidden="true" class="l0 pa fa fa-phone fs4"></em>
+          <a class="tcw" href="callto:00447988116178">+44 7988 116 178</a>
+        </li>
+        <li>
+          <button onclick="window.drift.api.openChat()" class="btn fs1 mb4 bgw tcp b">
+            <span class="mr1 fa fa-comment"></span>
+            chat with me now
+          </button>
+        </li>
+        <li class="tw5 lh3 fs2 pl5 pr mb3">
+          <em aria-hidden="true" class="l0 pa fa fa-envelope fs4"></em>
+          <a class="tcw" href="mailto:julian@goodafternoon.co">julian@goodafternoon.co</a>
+        </li>
 
-{{ partial "footer" . }}
+      </ul>
+
+    </div>
+  </div>
+  <!-- Start of Async Drift Code -->
+<script>
+!function() {
+  var t;
+  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+  t.factory = function(e) {
+    return function() {
+      var n;
+      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+    };
+  }, t.methods.forEach(function(e) {
+    t[e] = t.factory(e);
+  }), t.load = function(t) {
+    var e, n, o, i;
+    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+  });
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('skzwk2whptgt');
+</script>
+<!-- End of Async Drift Code -->
+</body>
