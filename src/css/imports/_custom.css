@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+:root{
+  --lred: #D99A9A;
+  --lblue: #5B74A6;
+  --blue: #0455BF;
+  --white: #F2F2F2;
+  --red: #F2594B;
+  --highlight: #feffba;
+}
+
 
 html{
   height:100%;
@@ -31,13 +40,22 @@ button{
 }
 
 .btn{
-  background: #007bd8;
   padding: .5em;
+  position: relative;
   color: #fff;
   border-radius: .3em;
   cursor: pointer;
   font-size: .8em;
-  box-shadow: 0 3px 0px #085d9c;
+  box-shadow: 0 3px 0px;
+}
+
+.btn:hover{
+  top: -1px;
+}
+
+.btn:focus{
+  top: 1px;
+  box-shadow: 0 2px 0px;
 }
 
 h1,h2,h3,h4,h5,h6,p,small,ul,li,input{
@@ -196,7 +214,7 @@ ul{ list-style: none; }
 .ttl{ text-transform: lowercase; }
 .ttc{ text-transform: capitalize; }
 
-.bgw{ background: white; }
+.bgw{ background: var(--white); }
 .bgtw{ background: rgba(255,255,255, .8); }
 
 .bgtc{ 
@@ -266,18 +284,21 @@ ul{ list-style: none; }
 
 .center{ margin-left: auto; margin-right: auto; }
 
-.highlight{ background: #a5ffa4; }
-.highlight-blue{ background: #54b5ff; }
+.highlight{ background: var(--highlight); }
 .tch{ color: #a5ffa4; }
-.bgp{ background: #007bd8; }
-.bgb{ background: #333; }
+.bgp{ background: var(--lblue); }
 
 .round{ border-radius: 1.3em; }
 
-.tcp{ color: #007bd8; }
-.tcw{ color: white; }
+.tcp{ color: var(--red); }
+.tcb{ color: var(--blue); }
+.tcw{ color: var(--white); }
 
-a{ color: #007bd8; }
+a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
 
 .arrow-up{ position: relative; }
 .arrow-up:before{
@@ -287,10 +308,40 @@ a{ color: #007bd8; }
   content: '';
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 50px solid #007bd8;
+  border-bottom: 50px solid var(--lblue);
 }
 
 .bsib{
-  box-shadow: inset 0 -40px 100px -40px rgb(206, 255, 206);
+  box-shadow: inset 0 -40px 100px -40px var(--highlight);
+}
+
+.icon-link{
+  border: none;
+}
+
+.transp-hover{
+  opacity: 0.5;
+  transition: 500;
+}
+
+.transp-hover:hover{
+  opacity: 1;
+}
+
+.avatar{
+  max-width: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.tcblack{ color: #333; }
+
+@media(min-width: 900px){ 
+  .df-desk{
+    display: flex;
+  }
+  .bl-desk{
+    border-left: 1px solid;
+  }
 }
 
