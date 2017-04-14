@@ -334,6 +334,7 @@ a{
   overflow: hidden;
 }
 
+.pointer{ cursor: pointer; }
 .tcblack{ color: #333; }
 
 @media(min-width: 900px){ 
