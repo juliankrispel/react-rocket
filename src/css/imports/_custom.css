@@ -9,6 +9,7 @@
   --white: #F2F2F2;
   --red: #F2594B;
   --highlight: #feffba;
+  --grey: #ccc;
 }
 
 
@@ -198,6 +199,7 @@ ul{ list-style: none; }
 .fr{ float: right;}
 
 .b{ font-weight: bold; }
+.i{ font-style: italic; }
 
 .tw1{ max-width: 10em; }
 .tw2{ max-width: 15em; }
@@ -259,12 +261,15 @@ ul{ list-style: none; }
 .w70{ width: 70%; }
 .w100{ width: 100%; }
 
+.block-link{ border: none; }
 
 .br{ border-right: 1px solid; }
 .bl{ border-left: 1px solid; }
 .bb{ border-bottom: 1px solid; }
 .bt{ border-top: 1px solid; }
 .bo{ border: 1px solid; }
+
+.bc-grey{ border-color: var(--grey); }
 
 /* screen height */
 .sh{ min-height: calc(100vh - 2em); }
@@ -346,3 +351,45 @@ a{
   }
 }
 
+
+.blog-content *{
+  line-height: 1.5em;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.blog-content h2{
+  padding-top: .5em;
+  font-size: 2em;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+
+.blog-content h3{
+  padding-top: 1.5em;
+  margin-bottom: .5em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+
+pre{
+  max-width: 100%;
+  overflow-x: scroll;
+  font-size: 1.3rem;
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  width: 100%;
+}
+
+.blog-content p > code{
+  background: #fff;
+  padding: .2em .4em;
+  border: 1px solid #ccc;
+}

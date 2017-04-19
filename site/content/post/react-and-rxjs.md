@@ -149,4 +149,6 @@ And then we render the interface and bind our event callbacks to streams:
 Voila, it's working, we're able to create Todos, update them as `done` and delete them.
 
 ### So what's next
-This is an introductory post and as such I made the example as simple as possible, which to be fair doesn't really show the power of rxjs. Rxjs really shines with more complex things, when you're actually building an app, or deal with complex user events. In the next blog post I'll show you how powerful rxjs in combination react can really b and what it excells at. I'll also work with `recompose` which expposes very useful higher order components for binding rxjs event streams to react views.
+This is an introductory post and as such I made the example as simple as possible, which to be fair doesn't really show the power of rxjs. Rxjs really shines with more complex things, when you're actually building an app, or deal with complex user events.
+
+In the next blog post I'll show you how powerful rxjs in combination react can really be and what it excells at. I'll also work with [recompose](https://github.com/acdlite/recompose/blob/master/docs/API.md) which expposes very useful higher order components for binding rxjs event streams to react views.
