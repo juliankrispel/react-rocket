@@ -62,6 +62,8 @@ class App extends Component{
 }
 ```
 
+![Counter App with rxjs](/img/blog/counter.gif)
+
 The above is a pretty simple example. Let's do something more complex, let's create a todo simple todo list:
 
 ## A simple todo list Subjects
