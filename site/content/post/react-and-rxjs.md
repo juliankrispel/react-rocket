@@ -148,6 +148,8 @@ And then we render the interface and bind our event callbacks to streams:
 
 Voila, it's working, we're able to create Todos, update them as `done` and delete them.
 
+![Screen capture of Todo List](/img/blog/todolist.gif)
+
 ### So what's next
 This is an introductory post and as such I made the example as simple as possible, which to be fair doesn't really show the power of rxjs. Rxjs really shines with more complex things, when you're actually building an app, or deal with complex user events.
 
