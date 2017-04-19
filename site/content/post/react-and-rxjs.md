@@ -1,7 +1,7 @@
 ---
 title: "React and RXjs Part 1 - Introduction"
 date: 2016-04-19T15:04:10.000Z
-description: This series is about using react in combination with rxjs, for fun event-based programming. This first part is an introduction, we'll make a basic dropdown with react and rxjs
+description: This series is about using react in combination with rxjs, for fun event-based programming. This first part is an introduction, we'll learn how to handle basic events with rxjs and react js.
 ---
 
 So this series is going to be very stream-of-thought. I'm going to build something with rxjs (only briefly played with it before) and tell my story with words.
