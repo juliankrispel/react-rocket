@@ -393,3 +393,11 @@ pre{
   padding: .2em .4em;
   border: 1px solid #ccc;
 }
+
+.blog-content img{
+  display: block;
+  margin-top: 2em !important;
+  margin: auto;
+}
+
+.mwf{ max-width: 100%; }
