@@ -127,3 +127,15 @@ First we need to import the module to use it.
 ```js
 import { RxHttpRequest } from 'rx-http-request';
 ```
+
+Now lets try it out and hook it up to the `inputValue$` stream:
+ 
+```
+  const options$ = inputValue$
+  .filter(val => val.length > 2)
+  .debounce(() => Observable.interval(500))
+  .flatMap(val => RxHttpRequest.get(`https://restcountries.eu/rest/v2/name/${val}`))
+  .subscribe(countries => {
+    console.log(countries);
+  })
+```
