@@ -1,8 +1,8 @@
-<div class="df-desk center jcc pt7 pb7 p4">
-  <div class="df fdc aic jcc df tac tw8 center pb6">
-		<h2 class="fs4 b rvl-2">Latest writing</h2>
+<div class="df-desk pb7">
+  <div class="df fdc jcc df tal tw8 pb6">
+		<h3 class="fs3 b rvl-1">Writing</h3>
 
-		<div class="tal mt3">
+		<div class="tal ">
 			{{ range where .Data.Pages "Type" "post" }}
 				<div class="ph1-ns w-50-ns flex">
 					{{ .Render "li" }}
