@@ -39,6 +39,6 @@ Ultimately, if I can't find your business online somewhere with a decent explana
 
 Ideally, your website will be designed. It can be very simple, but assuring that it works responsively is a must, lots of people use their phones nowadays, you don't want to loose those leads!
 
-My good friend [JP](https://twitter.com/jipiboily) suggested looking at Jonathan Starks [expensive problem](https://expensiveproblem.com/) for ideas about how to bill creatively and also [Philip Morgan](https://doubleyourfreelancing.com/category/branding-and-positioning/?ref=j) for ideas on positioning, this helped a ton to get into the right frame of mind.
+My good friend [JP](https://twitter.com/jipiboily) suggested looking at Jonathan Starks [expensive problem](https://expensiveproblem.com/) for ideas about how to bill creatively and also [double your freelancing](https://doubleyourfreelancing.com/category/branding-and-positioning) for ideas on positioning, this helped a ton to get into the right frame of mind.
 
 At the moment I'm getting so many requests per week that I have to turn people down - A great problem to have! I'll write more about how it's going and in particular how I convert leads, stay tuned!
