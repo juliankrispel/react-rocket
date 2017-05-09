@@ -18,6 +18,7 @@ I'm not a fan of stereotypes but to be brutally honest my experience with recrui
 Turns out - a much better approach to finding contract work is - guess what - talking to people and making friends. That is literally what networking is. Reach out to friends and aquaintances on twitter over linkedin, email, facebook etc. A recommendation from an ex-colleague or a friend can land you a gig.
 
 Here's a list of things I use to advertise my services on a regular basis, if you can think of something I'm missing please let me know:
+
 - Hackernews - there's a [freelancer thread](https://news.ycombinator.com/item?id=13764729) on hackernews which is a great source for leads!
 - Twitter
 - Facebook
