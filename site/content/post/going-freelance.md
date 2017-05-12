@@ -1,6 +1,6 @@
 ---
 title: "Going freelance as a web developer"
-date: 2016-05-09T15:04:10.000Z
+date: 2017-05-09T15:04:10.000Z
 description: This is my first blog post about going freelance. It's going really well so far, I want to share what and how I'm doing in the hope that others can learn from my mistakes!
 ---
 

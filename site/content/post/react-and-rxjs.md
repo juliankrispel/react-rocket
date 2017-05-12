@@ -1,6 +1,6 @@
 ---
 title: "React and RXjs Part 1 - Introduction"
-date: 2016-04-19T15:04:10.000Z
+date: 2017-04-19T15:04:10.000Z
 description: This series is about using react in combination with rxjs, for fun event-based programming. This first part is an introduction, we'll learn how to handle basic events with rxjs and react js.
 ---
 
