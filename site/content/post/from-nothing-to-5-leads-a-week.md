@@ -64,7 +64,7 @@ You're not selling small-margin products, you're selling a service, so a good le
 ## 5. Converting your visitors into actual customers
 Converting customers is all about getting them to talk to you, the more you break down this barrier, the more customers you will convert.
 
-I use a few techniques to convert visitors on my website to actual customers. However - the number one conversion tool is this: [Drift](https://www.drift.com/) which is an awesome tool - thanks [JP](https://twitter.com/jipiboily) for recommending it! It's also free for one user, so if you're starting out, please integrate it on your landing page - it takes 10 minute to set up and it is so worth it!
+I use a few techniques to convert visitors on my website to actual customers. However - the most effective tool I use to convert visitors is this: [Drift](https://www.drift.com/) (It's a support tool with a chat-widget like [intercom](https://www.intercom.com/) - thanks [JP](https://twitter.com/jipiboily) for recommending it! Drift is free for one user, so if you're starting out, try integrate it on your landing page - it takes 10 minute to set up and it is so worth it!
 
 - It's less formal and more convenient than an Email!
 - It's immediate and convenient, right from your website, it saves the customer time!
