@@ -31,11 +31,11 @@ Once I had tested those simple landing pages I started fleshing out the winner.
 
 The idea for react.js focused services came from talking to recruitment agents, there just seemed to be a huge demand for react and react-native work out there.
 
-## 2. Building/Designing a website
+## 2. Building / Designing a website
 
 It can just be a one-pager. However, a nicely designed website, that presents well the services you offer will give you a competetive advantage (especially as a freelance developer - since not many have a decent web-presence). A nice design doesn't have to necessarily be aesthetically pleasing - just look at [Noah Stokes's website](noahstokes.com), it's a ton of humour and also an internet sensation!
 
-If you don't want to deal with designing your website but have some money to spend, pay a decent designer $2000 for a kick-ass one pager. Reach out to me on [twitter](https://twitter.com/juliandoesstuff), I'm sure I can find someone, maybe I'll even do it myself if I'm intruiged and have time on my hands!
+If you don't want to deal with designing your website but have some money to spend, pay a decent designer $2000 for a kick-ass one pager. Reach out to me on [twitter](https: //twitter.com/juliandoesstuff), I'm sure I can find someone, maybe I'll even do it myself if I'm intruiged and have time on my hands!
 
 The most important thing however is that the words on your website help conversion. Think of your website as your escalator pitch. Ideally you address the following concerns:
 - Pain - What problem are you solving for me the client?
