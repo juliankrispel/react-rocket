@@ -1,5 +1,5 @@
 ---
-title: If you don't want your project to fail, write specifications
+title: How good project documentation can help your 
 date: 2017-05-15T10:45:00.000Z
 description: Specifications have a place, even in an agile environment. Without them, there's a high chance of miscommunication between your product and engineering team.
 ---
