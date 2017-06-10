@@ -1,7 +1,7 @@
 ---
 title: "Notes on working with draft js"
 date: 2017-05-09T15:04:10.000Z
-description: Here's a list of learnings from using draft js while working as contractor for Tettra
+description: Here's some notes/opinions on using draft js.
 ---
 
 - Write your own helper methods and put them online!
