@@ -194,3 +194,5 @@ And boom, here's what we have!
 Pretty neat huh!
 
 I hope this helped getting you started with draft-js. Stay tuned for more and let me know if you think I've missed something!
+
+Also, make sure you join the [draft-js slack channel](https://draftjs.herokuapp.com/), there's a bunch of awesome friendly folks on there!
