@@ -6,7 +6,7 @@ description: Draft.js is a powerful framework for creating text based editors. I
 
 ## Heads up
 
-- I'm writing the code for this tutorial at the same time. If you see a git commit hash somewhere, it's a link to a git commit related to that particular stage of the tutorial, here's [a link to the repository](https://github.com/juliankrispel/basic-draft-js-tutorial).
+- I'm writing the code for this tutorial at the same time. If you see a git commit hash somewhere (this would look something like `#f3280j39jd12390jke1`), it's a link to a git commit related to that particular stage of the tutorial, here's [a link to the repository](https://github.com/juliankrispel/basic-draft-js-tutorial).
 - draft.js depends on two technologies: [react.js](http://reactjs.com/) and [immutable.js](https://facebook.github.io/immutable-js/), basic knowledge of both those libraries is recommended to follow along with this tutorial.
 
 Right, let's begin
