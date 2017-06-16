@@ -1,10 +1,8 @@
 ---
 title: "Getting started with draft.js"
 date: 2017-06-16T14:49:00.000Z
-description: Getting started with draft.js
+description: Draft.js is a framework for creating text based editors. It lets you do a lot of stuff and removes a lot of the burden that comes with implementing text editors on the web. This is a basic tutorial on how to get started with draft-js.
 ---
-
-Draft.js is a framework for creating text based editors. It lets you do a lot of stuff and removes a lot of the burden that comes with implementing text editors on the web. This is a basic tutorial on how to get started with draft-js.
 
 ## Heads up
 
