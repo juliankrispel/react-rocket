@@ -26,3 +26,7 @@
 
 @import './imports/_font-awesome.css';
 @import './imports/_custom';
+
+small{
+  font-size: .75em;
+}
