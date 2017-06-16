@@ -134,7 +134,6 @@ the method that you mount on the `onChange` prop gets called whenever a change e
 Right, so now we have the Editor component working, let's implement some basic rich text editing with your standard key combinations, like `option + b` for bold, `option + i` for italic, `option + u` for underlined text. Draft-js comes with a utilities to make this really easy.
 
 ![Rich text editing with key commands](/img/blog/draft-js-rich-utils.png)
-![Rich text editing with key commands](/img/blog/draft-js-rich-utils.png)
 
 <small>[#16d29d7a83d5373153a99cf89139d3db44d4076a](https://github.com/juliankrispel/basic-draft-js-tutorial/commit/16d29d7a83d5373153a99cf89139d3db44d4076a)</small>
 
