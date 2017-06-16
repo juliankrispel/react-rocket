@@ -28,7 +28,7 @@ It's a react component and as such, state management is essentially up to you.
 
 Let's put the editor component into our react app. I'm placing it in `src/App.js`.
 
-Without reading any documentation, let's just render the Editor compomnent, this will throw an error which will tell us how to properly use the Editor component. Here's my `App.js`:
+Without reading any documentation, let's just render the Editor component, this will throw an exception. I like errors (when done well), because they tell us how to properly use something. Here's my `App.js`:
 
 ```js
 import React, { Component } from 'react';
@@ -94,12 +94,12 @@ Let's go through this.
 
 2. Then I contain the editorState within my container component, I do this within the constructor
 ```js
-  constructor() {
-    super();
-    this.state = {
-      editorState: EditorState.createEmpty(),
-    };
-  }
+constructor() {
+  super();
+  this.state = {
+    editorState: EditorState.createEmpty(),
+  };
+}
 ```
 Since draft-js doesn't do state updates automatically we need to manage updates for it. This is good, we want to be in control of state updates. I mount this in the component state so that I can later update the state with the editors onChange method.
 3. Then I pass the editorState to the Editor component in our App components render method:
@@ -155,16 +155,16 @@ Let's go over what we did here.
 ```
 3. Inside the handleKeyCommand method we now have an opportunity to intercept key commands and change our editorState. The argument that the handleKeyCommand callback receives is a string, like `backspace`, or `bold`. The method `RichUtils.handleKeyCommand` handles a bunch of key commands out of the box. We pass it the editorState and the command and if this returns a new editorState we pass it to our onChange method to update the state.
 ```js
-  handleKeyCommand = (command) => {
-    const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
+handleKeyCommand = (command) => {
+  const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
 
-    if (newState) {
-      this.onChange(newState);
-      return 'handled';
-    }
-
-    return 'not-handled';
+  if (newState) {
+    this.onChange(newState);
+    return 'handled';
   }
+
+  return 'not-handled';
+}
 ```
 
 Bear in mind that we need to return `'handled'` or `'not-handled'` in the `handleKeyCommand` method to tell the editor that the key command has been handled. Otherwise it'll fall back to native command handling.
