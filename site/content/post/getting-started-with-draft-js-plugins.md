@@ -4,6 +4,8 @@ date: 2017-06-18T14:48:00.000Z
 description: Draft.js is a very powerful on its own. But if you've ever used draft js to build apps, you'll know that you quickly end up building a messy, complex app. Draft-js-plugins comes to the rescue! In this post we'll learn how to use draft-js-plugins and how to build our own plugin.
 ---
 
+![Draft-js plugins logo](/img/blog/draft-js-plugins-logo.png)
+
 Heads up: To follow along with this tutorial some experience with draft-js would be beneficial. Feel free to stop here and have a look at my other blogpost on [getting started with draft js](http://reactrocket.com/post/getting-started-with-draft-js/).
 
 Draft.js is a powerful framework for creating rich text editors. But like anything, it comes with draw-backs. Draft.js plugins, the brainchild of the amazing human being that is [Nik Graf](https://twitter.com/nikgraf) (aka the nicest man on earth) is a plugin system that makes draft.js development a lot saner.
