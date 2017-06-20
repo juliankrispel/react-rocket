@@ -5,6 +5,7 @@ description: Persisting data with draft js is not very obvious but actually fair
 ---
 
 __Heads up:__ There are two previous posts in this series. If you're fairly new to [draft.js](https://draftjs.org/) you should check out at least the 1st one, it describes the basics of using and developing with draft.js.
+
 1. One on [Getting started with draft.js](/post/getting-started-with-draft-js/)
 2. Another on [Getting started with draft-js-plugins](/post/getting-started-with-draft-js-plugins/)
 
@@ -59,6 +60,7 @@ export default App;
 To be able to save your draft.js content to the server you'll need to first produce a data structure that is persistable and which you can send across a transfer protocol like HTTP. Although the draft.js content model is an [immutable](https://facebook.github.io/immutable-js/) data structure, you can convert it to a plain JavaScript object, convertable to `JSON`, which we all know and love.
 
 The draft.js library comes with handy utility functions to serialize and unserialize it's immutable data structure to a plain JS object and vice versa, there are two methods for this:
+
 - `convertFromRaw` converts raw JS object to `ContentState`.
 - `convertToRaw` converts `ContentState` to raw JS Object.
 
