@@ -1,6 +1,6 @@
 ---
 title: "Draft-js - Saving data to the server"
-date: 2017-06-19T14:48:00.000Z
+date: 2017-06-20T12:15:00.000Z
 description: Persisting data with draft js is not very obvious but actually fairly straightforward. In this tutorial you will learn how you would typically interact with a server.
 ---
 
