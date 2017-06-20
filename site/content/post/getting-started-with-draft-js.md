@@ -92,27 +92,30 @@ export default App;
 Let's go through this.
 
 1. First I import the EditorState class from draft-js
+
 `import { Editor, EditorState } from 'draft-js';`
 
 2. Then I contain the editorState within my container component, I do this within the constructor
+
 ```js
 constructor() {
   super();
-  this.state = {
+    this.state = {
     editorState: EditorState.createEmpty(),
   };
 }
 ```
 Since draft-js doesn't do state updates automatically we need to manage updates for it. This is good, we want to be in control of state updates. I mount this in the component state so that I can later update the state with the editors onChange method.
 3. Then I pass the editorState to the Editor component in our App components render method:
+
 ```js
-  render() {
-    return (
-      <Editor
-        editorState={this.state.editorState}
-      />
-    );
-  }
+render() {
+  return (
+    <Editor
+      editorState={this.state.editorState}
+    />
+  );
+}
 ```
 
 Now the Editor component will actually render on the page:
@@ -143,18 +146,20 @@ Let's go over what we did here.
 1. First we import the RichUtils library from draft-js `import { Editor, EditorState, RichUtils } from 'draft-js';`
 
 2. The handleKeyCommand prop on the editor will let us handle key commands. We pass a method to handle the key command:
+
 ```js
-  render() {
-    return (
-      <Editor
-        editorState={this.state.editorState}
-        handleKeyCommand={this.handleKeyCommand}
-        onChange={this.onChange}
-      />
-    );
-  }
+render() {
+  return (
+    <Editor
+      editorState={this.state.editorState}
+      handleKeyCommand={this.handleKeyCommand}
+      onChange={this.onChange}
+    />
+  );
+}
 ```
 3. Inside the handleKeyCommand method we now have an opportunity to intercept key commands and change our editorState. The argument that the handleKeyCommand callback receives is a string, like `backspace`, or `bold`. The method `RichUtils.handleKeyCommand` handles a bunch of key commands out of the box. We pass it the editorState and the command and if this returns a new editorState we pass it to our onChange method to update the state.
+
 ```js
 handleKeyCommand = (command) => {
   const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
