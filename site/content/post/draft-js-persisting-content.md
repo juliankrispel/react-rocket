@@ -2,14 +2,14 @@
 title: "Draft-js - Saving data to the server"
 date: 2017-06-20T12:15:00.000Z
 description: Persisting data with draft js is not very obvious but actually fairly straightforward. In this tutorial you will learn how you would typically interact with a server.
+series: 'learning-draft-js'
+series_weight: 3
 ---
 
-__Heads up:__ There are two previous posts in this series. If you're fairly new to [draft.js](https://draftjs.org/) you should check out at least the 1st one, it describes the basics of using and developing with draft.js.
+__Heads up:__
 
-1. One on [Getting started with draft.js](/post/getting-started-with-draft-js/)
-2. Another on [Getting started with draft-js-plugins](/post/getting-started-with-draft-js-plugins/)
-
-Also, all this code is [in a github repository](https://github.com/juliankrispel/draft-js-persisting-data), if you see a commit hash somewhere (like `#d31jf249i321j8...`), it's a link to a commit at that particular point in the tutorial.
+- There are two previous posts in this series. If you're fairly new to [draft.js](https://draftjs.org/) you should check out at least [the 1st one on getting started with draft.js](/post/getting-started-with-draft-js/).
+- All this code is [in a github repository](https://github.com/juliankrispel/draft-js-persisting-data), if you see a commit hash somewhere (like `#d31jf249i321j8...`), it's a link to a commit at that particular point in the tutorial.
 
 ## Draft.js is nice, but how on earth do I save data to the server?
 Unfortunately there doesn't seem to be that much documentation out there, nevermind tutorials. So when [Nik suggested on twitter](https://twitter.com/nikgraf/status/876449396401025024) that I write on how to save draft-js data to the server it seemed like an obvious choice - It's easy enough for a short tutorial and super useful: Unless you're just playing around with draft-js you will need to save to the server.

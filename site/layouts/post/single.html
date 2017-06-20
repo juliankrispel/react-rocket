@@ -1,21 +1,30 @@
 {{ partial "head" . }}
 <article class="df-desk center jcc pt7 tw9 p3">
+
   <div class="fdc jcc df center">
-    <h1 class="ffh s4 tal logo mt2 mb5">
-    <a class="block-link" href="/"><img alt="React Rocket (Logo)" width="70" src="/logo.svg"></a>
-  </h1>
-  <div class="mw6 center tal ph3 pv4 mwf">
-    <h1 class="fs5 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3 mb3 mt3">
-      <datetime class="fs1 i">{{ .Date.Format "Mon, Jan 2, 2006" }}</datetime>
-       - 
-      <strong class="mt2 fs1">{{ .ReadingTime }} minute read</strong>
+    <div class="ffh s4 tal logo mt2 mb5">
+      <a class="block-link" href="/"><img alt="React Rocket (Logo)" width="70" src="/logo.svg"></a>
     </div>
-    <div class="cms mw6">
-      <p class="mb5 mt4 fs4 lh3 bt bc-grey db pt4">{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-      <div class="blog-content fs2 tw8">
-        {{ .Content }}
+
+    <div class="mw6 center tal ph3 pv4 mwf">
+      <h1 class="fs5 lh-title b mb3">{{.Title}}</h1>
+
+      <div class="flex justify-between grey-3 mb3 mt3">
+        <datetime class="fs1 i">{{ .Date.Format "Mon, Jan 2, 2006" }}</datetime>
+         - 
+        <strong class="mt2 fs1">{{ .ReadingTime }} minute read</strong>
+      </div>
+
+
+      <div class="cms mw6">
+        <p class="mb5 mt4 fs4 lh3 bt bc-grey db pt4">{{ .Description }}</p>
+
+        {{ partial "post-series" . }}
+
+        {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+        <div class="blog-content fs2 tw8">
+          {{ .Content }}
+        </div>
       </div>
     </div>
   </div>

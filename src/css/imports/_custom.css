@@ -528,3 +528,13 @@ pre{
 small{
   font-size: .75em;
 }
+
+ol{
+  padding: 0;
+  margin: 0;
+}
+
+ol li{
+  margin-left: 1em;
+  line-height: 1.5em;
+}

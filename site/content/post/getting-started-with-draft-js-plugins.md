@@ -2,6 +2,8 @@
 title: "Getting started with draft.js plugins"
 date: 2017-06-18T14:48:00.000Z
 description: Draft.js is a very powerful on its own. But if you've ever used draft js to build apps, you'll know that you quickly end up building a messy, complex app. Draft-js-plugins comes to the rescue! In this post we'll learn how to use draft-js-plugins and how to build our own plugin.
+series: 'learning-draft-js'
+series_weight: 2
 ---
 
 ![Draft-js plugins logo](/img/blog/draft-js-plugins-logo.png)

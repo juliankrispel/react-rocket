@@ -1,0 +1,34 @@
+{{ partial "head" . }}
+
+<div class="center jcc pt7 tw9 p3">
+  <header class="fdc jcc df center">
+    <h1 class="ffh s4 tal logo mt2 mb5">
+      <a class="block-link" href="/"><img alt="React Rocket (Logo)" width="70" src="/logo.svg"></a>
+    </h1>
+  </header>
+
+  <section class="fdc ail center pb6 pb5 ">
+    <div class="df-desk w100">
+      <div class="df-desk pb7">
+        <div class="df fdc jcc df tal pb6">
+          <div>
+           <h2 class="fs4 b rvl-1 mb3">{{ .Title }}</h2>
+           <p class="fs3 mb3 rvl-2 lh2">
+             {{ index .Site.Data.series .Title}}
+           </p>
+           <ol class="rvl-3">
+              {{ range .Data.Pages }}
+              <li>
+                <a title="{{ .Title }}" href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+              </li>
+              {{ end }}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ partial "footer" }}

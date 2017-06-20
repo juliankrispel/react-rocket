@@ -1,0 +1,21 @@
+{{ if .Params.series }}
+  <strong class="mb3 db bold fs1">This post is part of a series:</strong>
+
+  <ol class="mb5">
+    {{ $title := .Title }}
+
+    {{ range index .Site.Taxonomies.series .Params.Series }}
+      {{ if eq .Page.Title $title }}
+        <li class="fs1 lh3">
+          {{ $title }} <strong>(current)</strrong>
+        </li>
+      {{ else }}
+        <li class="fs1 lh3">
+          <a title="{{ .Page.Title }}" href="{{ .Page.Permalink }}">
+            {{ .Page.Title }}
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ol>
+{{ end }}

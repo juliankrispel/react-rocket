@@ -1,3 +1,5 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Homepage"
+[taxonomies]
+series = "series"

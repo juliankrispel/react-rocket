@@ -2,12 +2,14 @@
 title: "Draft-js and Redux - the perfect couple"
 date: 2017-06-20T15:32:00.000Z
 description: In this tutorial you'll learn how to use Draft.js together with Redux, our favorite state management system for react apps.
+series: 'learning-draft-js'
+series_weight: 4
 ---
 
 __Heads up__:
 
 - You can find the [complete project in this github repository](https://github.com/juliankrispel/draft-js-and-redux)
-- This is the 4th in a series of blog posts on draft.js. I wrote one on how to [get started](http://reactrocket.com/post/getting-started-with-draft-js/), [how to use and write draft-js plugins](http://reactrocket.com/post/getting-started-with-draft-js-plugins/) and how to [use a server with draft-js](http://reactrocket.com/post/draft-js-persisting-content/).
+- This is the 4th in a series of blog posts on draft.js. Check out the above blog posts to get a primer on draft-js.
 
 We like draft.js (At least I hope you do since you're here reading this.) and we possibly also like redux, the go to state management system for react. The two of them are actually a really good couple. So let's marry them and use them together for all the things!
 
