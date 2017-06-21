@@ -163,7 +163,7 @@ when component initializes:
 
 And here's an example of the editor persisting it's content:
 
-![Draft js editor with localStorage](draft-js-editor-with-localstorage.gif)
+![Draft js editor with localStorage](/img/blog/draft-js-editor-with-localstorage.gif)
 
 ## LocalStorage is all good, but how do I hook this up with an actual server?
 It's the same principal, but instead of using the localStorage API we use http to exchange our `JSON` data with the server. So let's do just that.
