@@ -6,7 +6,7 @@ series: 'learning-draft-js'
 series_weight: 5
 ---
 
-In this episode of learning-draft-js we'll build something usefu - The functionality to search and replace strings. The working code for this tutorial is contained [withing this repo](https://github.com/juliankrispel/draft-js-building-search-and-replace).
+In this episode of learning-draft-js we'll build something usefu - The functionality to search and replace strings. The working code for this tutorial is contained [within this repo](https://github.com/juliankrispel/draft-js-building-search-and-replace).
 
 Let's get right into it.
 
