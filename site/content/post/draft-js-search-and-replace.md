@@ -319,5 +319,5 @@ And there you go, now you have some lovely search and replace functionality:
 
 ![Draft js editor with search and replace functionality](/img/blog/draft-js-search-and-replace-functionality.gif)
 
-This topic has been suggested by Jonathan Prada from [protonmail](https://protonmail.com/), thanks dude! If you have a suggestion for a topic I should cover, please hit me up on [twitter](https://twitter.com/juliandoesstuff)
+This topic has been suggested by Jonathan Prada on the [draft js slack](https://draftjs.herokuapp.com/), thanks dude! If you have a suggestion for a topic I should cover, please hit me up on [twitter](https://twitter.com/juliandoesstuff)
 
