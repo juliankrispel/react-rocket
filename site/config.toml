@@ -1,5 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Homepage"
+title = "React.js and Draft.js expert for hire"
 [taxonomies]
-series = "series"
+  series = "series"
+
+[params]
+  description = "I build and design interfaces for startups with react.js and draft.js. Get in touch to make your product shine!"
