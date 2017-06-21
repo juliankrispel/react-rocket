@@ -1,6 +1,6 @@
 ---
 title: "Draft-js building search and replace functionality"
-date: 2017-06-20T15:32:00.000Z
+date: 2017-06-21T12:32:00.000Z
 description: In this tutorial you'll learn how to implement a search and replace functionality. You'll use Modifiers to update state and decorators to highlight text.
 series: 'learning-draft-js'
 series_weight: 5
