@@ -9,6 +9,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink }}" rel="alternate feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
     <!-- Favicons -->
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff4400">
     <meta name="theme-color" content="#fff">
