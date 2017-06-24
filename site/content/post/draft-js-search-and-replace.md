@@ -93,7 +93,7 @@ All we've done is added two new fields to our state shape.
 
 Also, I added some CSS to make it look like something:
 
-![Draft js editor with search and replace interface](img/blog/draft-js-search-and-replace-interface.png)
+![Draft js editor with search and replace interface](/img/blog/draft-js-search-and-replace-interface.png)
 
 Since we're not doing anything with draft.js yet, this is only half implemented, so let's get that going:
 

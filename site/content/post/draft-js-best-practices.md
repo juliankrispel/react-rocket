@@ -2,6 +2,8 @@
 title: "Best practices when working with draft js"
 date: 2017-06-25T15:04:10.000Z
 description: This is a collection of tips and opinions on using draft-js. Given the framework's youth and lack of guidance on the internet, I feel like sharing some of my experience in the hope it'll be useful to others starting out.
+series: 'learning-draft-js'
+series_weight: 6
 ---
 
 __Disclaimer:__ It's hard to exclude my personal opinion from this blog post, but I'll try as best as I can. Please give me feedback, whether you think I'm wrong or you agree with me, or if you want to help submitting a pull request containing some known best practices. Also, please join the [draft.js slack](https://draftjs.herokuapp.com/) or the [reactiflux](https://www.reactiflux.com) __draft-js__ channel, there's usually some great, friendly people just like you, who want to figure stuff out and improve things!
