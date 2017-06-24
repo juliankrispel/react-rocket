@@ -52,4 +52,4 @@ Developing an architecture for a draft.js application is hard. There's not much 
 
 This is where [draft-js-plugins](https://www.draft-js-plugins.com/) become very helpful indeed - because you get a plugin architecture with it. It's fairly straight forward to [write your own plugin](https://github.com/draft-js-plugins/draft-js-plugins/blob/master/HOW_TO_CREATE_A_PLUGIN.md) with  `draft-js-plugins` and it gives you the opportunity to separate your draft-js functionality.
 
-Right, that's it. Again, if you 
+Right, that's it. Again, if you have any questions, suggestions, or just want a bit of friendly banter, get involved in the [draft js slack][https://draftjs.herokuapp.com/] or in the draft-js channel on [reactiflux](https://www.reactiflux.com) or chat to me directly.
