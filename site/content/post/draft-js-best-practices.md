@@ -6,7 +6,7 @@ series: 'learning-draft-js'
 series_weight: 6
 ---
 
-__Disclaimer:__ It's hard to exclude my personal opinion from this blog post, but I'll try as best as I can. Please give me feedback, whether you think I'm wrong or you agree with me, or if you want to help submitting a pull request containing some known best practices. Also, please join the [draft.js slack](https://draftjs.herokuapp.com/) or the [reactiflux](https://www.reactiflux.com) __draft-js__ channel, there's usually some great, friendly people just like you, who want to figure stuff out and improve things!
+__Disclaimer:__ It's hard to exclude my personal opinion from this blog post, but I'll try as best I can. Please give me feedback, whether you think I'm wrong or you agree with me, or if you want to help submitting a pull request to the draft.js docs containing some known best practices. 
 
 Doing work for clients on draft.js apps in production and also talking to people on community chat I've seen myself and other people make the same mistakes. So I figured it's time to start writing down what I have learnt so far, with the hope of helping others.
 
@@ -52,6 +52,11 @@ There is an ongoing effort to implement a tree [structure in draft-js](https://g
 ### 6. Be careful with your architecture
 Developing an architecture for a draft.js application is hard. There's not much advice out there and the draft.js website unfortunately lacks documentation about how to best structure your application. With draft.js it's easy to get into a vicious cycle of building complex component state and highly coupled functionality.
 
-This is where [draft-js-plugins](https://www.draft-js-plugins.com/) become very helpful indeed - because you get a plugin architecture with it. It's fairly straight forward to [write your own plugin](https://github.com/draft-js-plugins/draft-js-plugins/blob/master/HOW_TO_CREATE_A_PLUGIN.md) with  `draft-js-plugins` and it gives you the opportunity to separate your draft-js functionality.
+This is where [draft-js-plugins](https://www.draft-js-plugins.com/) comes to the rescue indeed - because you not only get lots functionality out of the box. You also get a get a simple architecture with it and that value is not to be underestimated. The cognitive burden of designing a system that encourages modularity with draft.js is more or less solved with this framework. It's fairly straight forward to [write your own plugin](https://github.com/draft-js-plugins/draft-js-plugins/blob/master/HOW_TO_CREATE_A_PLUGIN.md) with `draft-js-plugins`. Whenever I get serious about writing a complex draft.js based app, `draft-js-plugins` is a must have.
 
-Right, that's it. Again, if you have any questions, suggestions, or just want a bit of friendly banter, get involved in the [draft js slack][https://draftjs.herokuapp.com/] or in the draft-js channel on [reactiflux](https://www.reactiflux.com) or chat to me directly.
+### 7. Consider getting involved 
+Consider joining the [draft.js slack](https://draftjs.herokuapp.com/) or the [reactiflux](https://www.reactiflux.com) __draft-js__ channel, there's always some great, friendly people just like you, who want to figure stuff out and improve things!
+
+---
+
+Right, that's it. Again, if you have any questions, suggestions, or just want a bit of friendly banter, get involved in the [draft js slack](https://draftjs.herokuapp.com/) or in the draft-js channel on [reactiflux](https://www.reactiflux.com) or chat to me directly.
