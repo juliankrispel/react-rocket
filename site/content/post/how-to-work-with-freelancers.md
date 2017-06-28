@@ -1,7 +1,7 @@
 ---
-title: "Focus is all - How to work best with remote contract developers"
-date: 2017-05-19T10:45:00.000Z
-description: "A list of things that can enable a successful contracting arrangement between a software engineer and the organization that's hiring him."
+title: "Focus is all - How to successfully work with freelance developers"
+date: 2017-06-28T09:15:00.000Z
+description: "A list of things about what I learned can enable a successful contracting arrangement between a software engineer and the organization that's hiring him."
 ---
 
 ### First, a little background
