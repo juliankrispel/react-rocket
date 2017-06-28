@@ -10,7 +10,7 @@ description: "A list of things that can enable a successful contracting arrangem
 [Tettra](https://tettra.co) searched for a draft.js specialist and got in touch with [G2i](http://g2i.co) run by the amazing Greenberg brothers [Gabe](https://twitter.com/gabe_g2i) and Julian. I had joined [G2i](http://g2i.co), a talent platform specifically for React & React Native developers and they matched me with [Tettra](https://tettra.co). The contract was an exemplatory success (for both sides I believe/hope ;), here's what went right and what you can do to make your engineering contracts more successful, from both points of view:
 
 ### Avoid distractions at all cost
-Focus for engineering work is a requirement for efficiency. If the engineer is allowed to put all efforts into their work without having to think of anything outside their primnary responsibilities, that's what enables establishing focus. All below points are things that helped achieve focus in the working arrangement I had with tettra:
+Focus for engineering work is a requirement for efficiency. If the engineer is allowed to put all efforts into their work without having to think of anything outside their primary responsibilities, that's what enables establishing focus. All below points are things that helped achieve focus in the working arrangement I had with tettra:
 
 ### When you know what you want to do, get a specialist (or be one)
 It may be that a developer is good in many things, maybe even design and project management. But switching between different tasks can cost both sides in terms of efficiency.
@@ -57,4 +57,4 @@ In a contract arrangement like this, quality must be a major concern. Both as th
 Well that's pretty much it, last but not least - I want to thank these people for making this contract the pleasant learning experience it was!
 
 - Shoutout to [Shauni](https://twitter.com/rogueraspberry) for being an excellent Head of Engineering - well organized and supportive and accomodating. Also shoutout to Shauni and [Oscar](https://twitter.com/oscargemorrison) for being incredibly supportive, constantly reviewing my prs and helping me to move forward.
-- Shoutout to Gabe and Julian Greenberg from [G2i](http://g2i.co), a React & React Native developer platform, who connected me with [Tettra](https://tettra.co)
+- Shoutout to Gabe and Julian Greenberg from [G2i](http://g2i.co), a React & React Native developer platform, who connected me with [Tettra](https://tettra.co).
