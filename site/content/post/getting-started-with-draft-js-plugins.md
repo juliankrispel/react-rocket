@@ -374,7 +374,3 @@ And here we are, the highlights are purple now:
 Right. That's it. For giggles. I published the [plugin on npm](https://www.npmjs.com/package/draft-js-highlight-plugin). As always, feel free to reach out.
 
 And don't forget to join the community online. There's plenty of friendly folks on the [draft-js slack](https://draftjs.herokuapp.com/) and there's also a draft-js channel on [reactiflux](https://www.reactiflux.com/). Come on and say hi!
-
-
-
-
