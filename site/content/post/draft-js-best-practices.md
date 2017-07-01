@@ -28,8 +28,8 @@ Check out this excellent article on [building performant react apps](https://med
 
 Typically, you'd use `convertToRaw` to dispatch your state to the server, and `convertToRaw` once you fetched it.
 
-### 3. Always use the `children` prop type to render content.
-For [custom components](https://draftjs.org/docs/advanced-topics-block-components.html) and [decorator components](https://draftjs.org/docs/advanced-topics-decorators.html), you should always use the `children` prop to render the content of an entity or a block, if you don't draft-js will misbehave - editor interaction will break if you don't
+### 3. Always use the `children` prop to render editable text
+For [custom components](https://draftjs.org/docs/advanced-topics-block-components.html) and [decorator components](https://draftjs.org/docs/advanced-topics-decorators.html), you should always use the `children` prop to render editable text. The `children` prop contains not only said text, the text is wrapped in components like `EditorBlock` and `EditorLeaf`. This is needed to maintain editing functionality inside custom components.
 
 ### 4. Just like any react component, you can optimize your decorators and custom block components with `shouldComponentUpdate`.
 A feature-rich draft.js editor with lots of decorators and custom block components can easily cause performance issues, especially for large documents. Draft.js doesn't do anything special to prevent unnecessary rendering of these components, you can however optimize by using the [`shouldComponentUpdate` method](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate), which puts you in control of when your components re-render.
