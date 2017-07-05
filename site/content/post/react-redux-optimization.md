@@ -1,14 +1,14 @@
 ---
-title: "Optimizing Redux in React applications"
-date: 2017-07-5T21:30:00.000Z
-description: It's not very obvious how to optimize react applications that use redux. But it's actually fairly straightforward. Here's a short guide, along with a few examples.
+title: "Redux isn't slow, you're just doing it wrong - An optimization guide"
+date: 2017-07-05T21:30:00.000Z
+description: It's not very obvious how to optimize react applications that use Redux. But it's actually fairly straightforward. Here's a short guide, along with a few examples.
 ---
 
-When optimizing applications that use redux with react, I often hear people saying that redux is slow. In 99% of cases, the cause for bad performance (this goes for any other framework) is linked to unnecessary rendering, since DOM updates are expensive! In this article, you'll learn how to avoid unnecessary rendering when using redux bindings for react.
+When optimizing applications that use Redux with react, I often hear people saying that Redux is slow. In 99% of cases, the cause for bad performance (this goes for any other framework) is linked to unnecessary rendering, since DOM updates are expensive! In this article, you'll learn how to avoid unnecessary rendering when using Redux bindings for react.
 
-Typically, to update react components whenever your redux store updates, we use the [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) higher order component from the [official react bindings for redux](https://github.com/reactjs/react-redux). This is a function that wraps your component in another component, which subscribes to changes in the redux store and renders itself and consequently it's decendents whenever an update occurs.
+Typically, to update react components whenever your Redux store updates, we use the [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) higher order component from the [official react bindings for Redux](https://github.com/reactjs/react-redux). This is a function that wraps your component in another component, which subscribes to changes in the Redux store and renders itself and consequently it's descendants whenever an update occurs.
 
-## A quick dive into react-redux, the official react bindings for redux
+## A quick dive into react-redux, the official react bindings for Redux
 The `connect` higher order component is actually already optimized. To understand how to best use it it's best to understand how it works!
 
 Redux, as well as react-redux are actually quite small libraries so the source code isn't impenetrable. I encourage people to read through the source code, or at least bits of it. If you want to go a step further, write your own implementation, it'll give you thorough insight into why a library is designed the way it is.
@@ -35,11 +35,11 @@ return function connect(
 
 As a side note - The only mandatory argument is `mapStateToProps` and in most cases you will only need the first two arguments. However, I'm using the signature to here to illustrate how the react bindings work.
 
-All arguments passed into the `connect` function are used to generate an object, which is passed onto the wrapped component as props. `mapStateToProps` is used for mapping the state from your redux store to an object, `mapDispatchToProps` is used to produce an object containing functions - typically those functions are action creators. Finally `mergeProps` takes three arguments `stateProps`, `dispatchProps` and `ownProps`. The first is the result of `mapStateToProps`, the second the result of `mapDispatchToProps` and the third argument is the props object that is inherited from the component itself. By default `mergeProps` simply combines those arguments into one object, but if you pass in a function for the `mergeProps` argument, `connect` will instead use that to generate the props for the wrapped component.
+All arguments passed into the `connect` function are used to generate an object, which is passed onto the wrapped component as props. `mapStateToProps` is used for mapping the state from your Redux store to an object, `mapDispatchToProps` is used to produce an object containing functions - typically those functions are action creators. Finally `mergeProps` takes three arguments `stateProps`, `dispatchProps` and `ownProps`. The first is the result of `mapStateToProps`, the second the result of `mapDispatchToProps` and the third argument is the props object that is inherited from the component itself. By default `mergeProps` simply combines those arguments into one object, but if you pass in a function for the `mergeProps` argument, `connect` will instead use that to generate the props for the wrapped component.
 
-The fourth argument of the `connect` function is an options object. This contains 5 options: `pure`, which can be either true or false as well as 4 functions (which should return a boolean) that determine whether to rerender the component or not. `pure` is by default set to true. If set to false, the `connect` hoc will skip any optimizations and the 4 functions in the options object will be irrelevant. I personally can't think of a use-case for that, but the option to set it to false is available if you prefer to turn off optimization.
+The fourth argument of the `connect` function is an options object. This contains 5 options: `pure`, which can be either true or false as well as 4 functions (which should return a boolean) that determine whether to re-render the component or not. `pure` is by default set to true. If set to false, the `connect` hoc will skip any optimizations and the 4 functions in the options object will be irrelevant. I personally can't think of a use-case for that, but the option to set it to false is available if you prefer to turn off optimization.
 
-The object that our `mergeProps` function produces is compared with the last props object. If our `connect` HOC thinks the props object has changed, the component will rerender. To understand how the library decides whether there has been a change we can look at the [`shallowEqual` function](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js). If the function returns true, the component won't rerender, if it returns false it will rerender. `shallowEqual` performs this comparison. Below you'll see part of the `shallowEqual` method, which tells you all you need to know:
+The object that our `mergeProps` function produces is compared with the last props object. If our `connect` HOC thinks the props object has changed, the component will re-render. To understand how the library decides whether there has been a change we can look at the [`shallowEqual` function](https://github.com/reactjs/react-redux/blob/master/src/utils/shallowEqual.js). If the function returns true, the component won't re-render, if it returns false it will re-render. `shallowEqual` performs this comparison. Below you'll see part of the `shallowEqual` method, which tells you all you need to know:
 
 ```
 for (let i = 0; i < keysA.length; i++) {
@@ -52,7 +52,7 @@ for (let i = 0; i < keysA.length; i++) {
 
 To summarize, this is what the above code does:
 
-It loops over the keys in object a and checks if object B owns the same property. Then it checks if the property (with the same name) from object A equals the one from object B. If only one of the comparisons returns false, the objects will be deemed unequal and a rerender will occur.
+It loops over the keys in object a and checks if object B owns the same property. Then it checks if the property (with the same name) from object A equals the one from object B. If only one of the comparisons returns false, the objects will be deemed unequal and a re-render will occur.
 
 This leads us to one golden rule:
 
@@ -76,7 +76,7 @@ const ConnectedBigComponent = connect(
 );
 ```
 
-Now, everytime either `a`, `b` or `c` changes, the `BigComponent`, including `CompA`, `CompB` and `CompC` will rerender.
+Now, every time either `a`, `b` or `c` changes, the `BigComponent`, including `CompA`, `CompB` and `CompC` will re-render.
 
 Instead, split up your components and don't be afraid to make more use of `connect`:
 
@@ -95,7 +95,7 @@ const BigComponent = () => (
 );
 ```
 
-With this refactored code, `CompA` will only re-render when `a` has changed, `CompB` when `b` has changed, etc. Consider a scenario where each value `a`, `b` and `c` are each updated frequently. For every update, we're now ren-dering one, instead of all components. This is barely noticable with three components, but what if you have many more!
+With this update, `CompA` will only re-render when `a` has changed, `CompB` when `b` has changed, etc. Consider a scenario where each value `a`, `b` and `c` are each updated frequently. For every update, we're now re-rendering one, instead of all components. This is barely noticeable with three components, but what if you have many more!
 
 ### Transform your state to make it as minimal as possible
 Here's a hypothetical (slightly contrived) example:
@@ -115,7 +115,7 @@ You have a large list of items, let's say 300 or more.
 </List>
 ```
 
-When we click on a List Item, an action gets fired with updates a store value - `selectedItem`. Each list item connects to redux and gets the `selectedItem`:
+When we click on a List Item, an action gets fired with updates a store value - `selectedItem`. Each list item connects to Redux and gets the `selectedItem`:
 
 ```js
 const ListItem = connect(
@@ -123,9 +123,9 @@ const ListItem = connect(
 )(SimpleListItem);
 ```
 
-We're doing the right thing, we're connecting the component only to the state that it needs. However when `selectedItem` gets updated, all the `ListItem` components rerender, because the object we're returning from `selectedItem` has changed. Before it was `{ selectedItem: 123 }`, now it is `{ selectedItem: 120 }`.
+We're doing the right thing, we're connecting the component only to the state that it needs. However when `selectedItem` gets updated, all the `ListItem` components re-render, because the object we're returning from `selectedItem` has changed. Before it was `{ selectedItem: 123 }`, now it is `{ selectedItem: 120 }`.
 
-Now bear in mind that we're using the `selectedItem` value to check whether the current item is selected. So the only thing our component really needs to know is whether it is selected or not - in essence - a `Boolean`. Booleans are great since there are only two possible states, `true` or `false`. So if we return a boolean instead of `selectedItem`, only the two items for which the boolean changes will rerender, which is all we need. `mapStateToProps` actually takes in the components `props` as it's second argument, we can use that to check wether this is in fact the selected item. Here's how that'll look like:
+Now bear in mind that we're using the `selectedItem` value to check whether the current item is selected. So the only thing our component really needs to know is whether it is selected or not - in essence - a `Boolean`. Booleans are great since there are only two possible states, `true` or `false`. So if we return a boolean instead of `selectedItem`, only the two items for which the boolean changes will re-render, which is all we need. `mapStateToProps` actually takes in the components `props` as it's second argument, we can use that to check whether this is in fact the selected item. Here's how that'll look like:
 
 ```js
 const ListItem = connect(
@@ -133,12 +133,12 @@ const ListItem = connect(
 )(SimpleListItem);
 ```
 
-Tada - now whenever our `selectedItem` value changes, only two components rerender - the `ListItem` that is now selected and the one that has been unselected.
+Now whenever our `selectedItem` value changes, only two components re-render - the `ListItem` that is now selected and the one that has been unselected.
 
 
 ### Keep your data flat
 
-The [redux docs mention this](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html) as a best practice. Keeping the shape of your store flat is beneficial for a bunch of reasons. But for the purpose of this article, nesting poses a problem because for our app to be as fast as possible, we want our updates to be as granular as possible. Let's say we have a nested shape like this:
+The [Redux docs mention this](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html) as a best practice. Keeping the shape of your store flat is beneficial for a bunch of reasons. But for the purpose of this article, nesting poses a problem because for our app to be as fast as possible, we want our updates to be as granular as possible. Let's say we have a nested shape like this:
 
 ```js
 {
@@ -170,13 +170,13 @@ In order to optimize our `Article`, `Comment` and `User` components, we'll now n
 }
 ```
 
-And then select comments and user information with your mapping functions. More about this can be read in the [redux docs on normalizing state shape](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html).
+And then select comments and user information with your mapping functions. More about this can be read in the [Redux docs on normalizing state shape](http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html).
 
-### Bonus: Libraries for selecting redux state
+### Bonus: Libraries for selecting Redux state
 
-This is entirely optional and up to you. Generally all the above advice should get you far enough to write fast apps with react and redux. But there are two excellent libraries that make selecting state a bunch easier:
+This is entirely optional and up to you. Generally all the above advice should get you far enough to write fast apps with react and Redux. But there are two excellent libraries that make selecting state a bunch easier:
 
-[Reselect](https://github.com/reactjs/reselect) is a compelling tool for writing `selectors` for your redux app. From the reselect docs:
+[Reselect](https://github.com/reactjs/reselect) is a compelling tool for writing `selectors` for your Redux app. From the reselect docs:
 
 - Selectors can compute derived data, allowing Redux to store the minimal possible state.
 - Selectors are efficient. A selector is not recomputed unless one of its arguments change.
@@ -184,4 +184,4 @@ This is entirely optional and up to you. Generally all the above advice should g
 
 For applications with complex interfaces, complex state and/or frequent updates, reselect can help a ton to make your app faster!
 
-[Ramda](http://ramdajs.com/) is a powerful library full of higher order functions. In other words - functions to create functions. Since our mapping functions are just that - functions, we can use ramda to create our selectors quite conveniently. Ramda can do all that selectors do and more. Checkout the [ramda cookbook](https://github.com/ramda/ramda/wiki/Cookbook) for some examples of what you can do with ramda.
+[Ramda](http://ramdajs.com/) is a powerful library full of higher order functions. In other words - functions to create functions. Since our mapping functions are just that - functions, we can use Ramda to create our selectors quite conveniently. Ramda can do all that selectors do and more. Checkout the [Ramda cookbook](https://github.com/ramda/ramda/wiki/Cookbook) for some examples of what you can do with Ramda.

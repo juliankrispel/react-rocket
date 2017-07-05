@@ -1,10 +1,10 @@
-<div class="df-desk pb7">
-  <div class="df fdc jcc df tal tw8 pb6">
-		<h3 class="fs3 b rvl-1 mb1">Writing</h3>
+<div class="pb3 pt5">
+  <div class="fdc jcc df tal pb6">
+		<h3 class="fs4 b rvl-1 m0">Writing</h3>
 
-		<div class="tal ">
+		<div class="tal second-clear">
 			{{ range where .Data.Pages "Type" "post" }}
-				<div class="ph1-ns w-50-ns flex">
+				<div class="db ph1-ns fl-ns w50-l pr6 tw8">
 					{{ .Render "li" }}
 				</div>
 			{{ end }}

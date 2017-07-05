@@ -81,40 +81,46 @@
   </div>
 
   <div class="fdc ail center pb6 dpl7 dpr7 pb5  mpl4 mpr4">
-    <div class="df-desk w100">
-      <div class="f1 dpr5 pb5">
-        <h3 class="rvl-2 fs4 dib b mb3">Don't be shy!</h3>
-        <p class="rvl-2 fs3 lh3 pr6 mb4">
-          Whether you want to talk business or just chat, say hi! If I'm not currently online I’ll get back to you asap.
-        </p>
+    <div class="w100">
+      <div class="df-desk pb5">
+        <div class="dpr5 w100">
+          <h3 class="rvl-2 fs4 dib b mb3">Don't be shy!</h3>
+          <p class="rvl-2 fs3 lh3 pr6 mb4">
+            Whether you want to talk business or just chat, say hi! If I'm not currently online I’ll get back to you asap.
+          </p>
+        </div>
 
-        <ul class="mt3 rvl-2">
-          <li class="tw5 lh3 fs1 pl5 pr mb3">
-            <em aria-hidden="true" class="l0 pa fa fa-calendar fs3 tcp"></em>
-            <a target="_blank" href="https://calendar.google.com/calendar/selfsched?sstoken=UURVZ1NpRUh6MUI3fGRlZmF1bHR8ZmJmN2E1ODBlMGZhMTdlN2YwZWZkODFhODk4MjM5ZmM">Book a free initial consultation (30 min)</a>
-          </li>
+        <div class="dpr5 w100">
+          <ul class="mt3 rvl-2">
+            <li class="tw5 lh3 fs1 pl5 pr mb3">
+              <em aria-hidden="true" class="l0 pa fa fa-calendar fs3 tcp"></em>
+              <a target="_blank" href="https://calendar.google.com/calendar/selfsched?sstoken=UURVZ1NpRUh6MUI3fGRlZmF1bHR8ZmJmN2E1ODBlMGZhMTdlN2YwZWZkODFhODk4MjM5ZmM">Book a free initial consultation (30 min)</a>
+            </li>
 
-          <li class="tw5 lh3 fs1 pl5 pr mb3">
-            <em aria-hidden="true" class="l0 pa fa fa-comment fs4 tcp"></em>
-            <a onclick="window.drift.api.openChat()" class="pointer">
-              chat with me
-            </a>
-          </li>
+            <li class="tw5 lh3 fs1 pl5 pr mb3">
+              <em aria-hidden="true" class="l0 pa fa fa-comment fs4 tcp"></em>
+              <a onclick="window.drift.api.openChat()" class="pointer">
+                chat with me
+              </a>
+            </li>
 
-          <li class="tw5 lh3 fs1 pl5 pr mb3">
-            <em aria-hidden="true" class="l0 pa fa fa-envelope fs3 tcp"></em>
-            <a href="mailto:julian@reactrocket.com">julian@reactrocket.com</a>
-          </li>
-          <li class="mt5">
-            <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://twitter.com/juliandoesstuff"><span class="fa fa-twitter"></span></a>
-            <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://uk.linkedin.com/in/julian-krispel-samsel-67487a1b"><span class="fa fa-linkedin"></span></a>
-            <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://github.com/juliankrispel"><span class="fa fa-github"></span></a>
-          </li>
-        </ul>
+            <li class="tw5 lh3 fs1 pl5 pr mb3">
+              <em aria-hidden="true" class="l0 pa fa fa-envelope fs3 tcp"></em>
+              <a href="mailto:julian@reactrocket.com">julian@reactrocket.com</a>
+            </li>
+            <li class="mt5">
+              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://twitter.com/juliandoesstuff"><span class="fa fa-twitter"></span></a>
+              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://uk.linkedin.com/in/julian-krispel-samsel-67487a1b"><span class="fa fa-linkedin"></span></a>
+              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://github.com/juliankrispel"><span class="fa fa-github"></span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="f1 dpl5">
+      <div>
         {{ partial "blog" . }}
       </div>
     </div>
 
+
+  {{ partial "post-footer" }}
   {{ partial "footer" }}

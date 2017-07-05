@@ -24,7 +24,10 @@
  */
 
 
+@import './imports/_media-queries.css';
 @import './imports/_font-awesome.css';
 @import './imports/_custom';
+@import './imports/_floats';
+@import './imports/_heights';
 
 

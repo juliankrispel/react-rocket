@@ -218,9 +218,6 @@ ul{ list-style: none; }
 .fsl{ font-size: 1.5em !important; }
 .fsh{ font-size: 2em !important; }
 
-.fl{ float: left;}
-.fr{ float: right;}
-
 .b{ font-weight: bold; }
 .i{ font-style: italic; }
 
@@ -286,6 +283,16 @@ ul{ list-style: none; }
 .w50{ width: 50%; }
 .w70{ width: 70%; }
 .w100{ width: 100%; }
+
+
+@media (--breakpoint-not-small) {
+  .w50-ns{ width: 50%; }
+}
+
+
+@media (--breakpoint-large) {
+  .w50-l{ width: 50%; }
+}
 
 .block-link{ border: none; }
 
@@ -537,4 +544,9 @@ ol{
 ol li{
   margin-left: 1em;
   line-height: 1.5em;
+}
+
+
+.second-clear > *:nth-child(2n+1){
+  clear:left;
 }
