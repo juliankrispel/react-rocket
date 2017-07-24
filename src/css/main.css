@@ -29,5 +29,9 @@
 @import './imports/_custom';
 @import './imports/_floats';
 @import './imports/_heights';
+@import './imports/_max-widths';
+@import './imports/_line-height';
+@import './imports/_text-align';
+@import './imports/_vertical-align';
 
 
