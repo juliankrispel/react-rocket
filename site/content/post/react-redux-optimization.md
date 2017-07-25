@@ -6,14 +6,14 @@ description: It's not very obvious how to optimize react applications that use R
 
 When optimizing applications that use Redux with react, I often hear people saying that Redux is slow. In 99% of cases, the cause for bad performance (this goes for any other framework) is linked to unnecessary rendering, since DOM updates are expensive! In this article, you'll learn how to avoid unnecessary rendering when using Redux bindings for react.
 
-Typically, to update react components whenever your Redux store updates, we use the [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) higher order component from the [official react bindings for Redux](https://github.com/reactjs/react-redux). This is a function that wraps your component in another component, which subscribes to changes in the Redux store and renders itself and consequently it's descendants whenever an update occurs.
+Typically, to update react components whenever your Redux store updates, we use the [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) higher order component from the [official react bindings for Redux](https://github.com/reactjs/react-redux). This is a function that wraps your component in another component, which subscribes to changes in the Redux store and renders itself and consequently its descendants whenever an update occurs.
 
 ## A quick dive into react-redux, the official react bindings for Redux
 The `connect` higher order component is actually already optimized. To understand how to best use it it's best to understand how it works!
 
 Redux, as well as react-redux are actually quite small libraries so the source code isn't impenetrable. I encourage people to read through the source code, or at least bits of it. If you want to go a step further, write your own implementation, it'll give you thorough insight into why a library is designed the way it is.
 
-Without further ado, let's dive a little into how the react bindings work. As we established, the central piece of the react bindings is the `connect` higher order component, this is it's signature:
+Without further ado, let's dive a little into how the react bindings work. As we established, the central piece of the react bindings is the `connect` higher order component, this is its signature:
 
 ```js
 return function connect(
@@ -125,7 +125,7 @@ const ListItem = connect(
 
 We're doing the right thing, we're connecting the component only to the state that it needs. However when `selectedItem` gets updated, all the `ListItem` components re-render, because the object we're returning from `selectedItem` has changed. Before it was `{ selectedItem: 123 }`, now it is `{ selectedItem: 120 }`.
 
-Now bear in mind that we're using the `selectedItem` value to check whether the current item is selected. So the only thing our component really needs to know is whether it is selected or not - in essence - a `Boolean`. Booleans are great since there are only two possible states, `true` or `false`. So if we return a boolean instead of `selectedItem`, only the two items for which the boolean changes will re-render, which is all we need. `mapStateToProps` actually takes in the components `props` as it's second argument, we can use that to check whether this is in fact the selected item. Here's how that'll look like:
+Now bear in mind that we're using the `selectedItem` value to check whether the current item is selected. So the only thing our component really needs to know is whether it is selected or not - in essence - a `Boolean`. Booleans are great since there are only two possible states, `true` or `false`. So if we return a boolean instead of `selectedItem`, only the two items for which the boolean changes will re-render, which is all we need. `mapStateToProps` actually takes in the components `props` as its second argument, we can use that to check whether this is in fact the selected item. Here's how that'll look like:
 
 ```js
 const ListItem = connect(
