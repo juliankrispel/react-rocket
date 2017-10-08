@@ -1,0 +1,45 @@
+---
+title: "Native mac apps with react-native-macos"
+date: 2017-09-26T10:45:00.000Z
+description: react-native-macos is an open source clone of react native and it's pretty decent!
+---
+
+## Hello world on macos
+
+So I'm going to dive right into it.
+
+Here's the project that I'm using to build my app - [react-native-macos](https://github.com/ptmt/react-native-macos)
+
+It's pretty straight forward to get started:
+
+```bash
+$ npm install react-native-macos-cli -g
+$ react-native-macos init MyProject
+$ cd MyProject
+$ react-native-macos run-macos
+```
+
+Boom, you have a running mac app!
+
+
+## The brief
+
+So I love using slack! But!!!! The slack app kinda sucks. It's terribly slow and some of the reason for that is that it uses a webview. So why not leverage native capabilities and make a super speedy native app with ease (and JavaScript). So we're going to create a simple Slack client for macos.
+
+
+## Step - 1 Authenticating a slack user
+
+Seems pretty simple.
+
+
+## This is all well and good but how do I make that into a standalone app?
+
+Pretty simples, just follow these instructions:
+
+1. Open XCode
+2. Open Product > Scheme > Edit Scheme
+3. Click on Info Tab > Select Build Configuration - Release
+4. Close Modal and click on menu item Product > Build (or hit CMD+B)
+5. When build has finished click on File > Project Settings
+6. You'll see a folder there that is used for the build output (Usually something like 'DerivedData'). Click on the folder to find your build.
+
