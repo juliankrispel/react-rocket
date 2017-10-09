@@ -1,6 +1,6 @@
 ---
 title: "React: Turn your hoc into a render prop component with one line of code"
-date: 2017-10-09T15:32:00.000Z
+date: 2017-10-09T12:45:00.000Z
 description: In this blog-post you'll learn how easy it is to turn higher order components like connect from react-redux, graphql from apollo, or any other higher order component into a normal component with a render prop. Which in turn will enable you to use those components dynamically, inside your render methods.
 ---
 
