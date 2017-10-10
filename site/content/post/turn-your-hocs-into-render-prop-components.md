@@ -1,16 +1,20 @@
 ---
-title: "React: Turn your hoc into a render prop component with one line of code"
+title: "Upgrade your react.js hoc with renderProps"
 date: 2017-10-09T12:45:00.000Z
-description: In this blog-post you'll learn how easy it is to turn higher order components like connect from react-redux, graphql from apollo, or any other higher order component into a normal component with a render prop. Which in turn will enable you to use those components dynamically, inside your render methods.
+description: In this blog-post you'll learn how easy it is to turn higher order components into normal components (with render props), for fun and profit!
 ---
 
-Disclaimer: This is not a rant about how nasty higher order components are and how much better render props are. Instead what I'm trying to show you is how we can combine them and use the advantages of both!
+__tldr__; Use popular hocs such as `connect()` from react-redux or `graphql()` from apollo, like normal components just by wrapping a component with a render prop.
 
-Higher order components are useful! For a while now they've been the go-to abstraction to compose functionality for the react community. However there are some limitations with `hoc`s, here are three of them:
+__Heads up__: This is not a rant about how nasty higher order components are and how render props are the hot new shit - Instead I'll demonstrate how to use both in combination.
 
-1. As a user it's not explicit what props a higher order component will add.
+### The problem with higher order components
+
+Higher order components have become ubiquitous! They've been the go-to abstraction for composition in the react community. However there are some limitations with `hoc`s, here are three of them:
+
+1. As a user of higher order components it's not explicit what props will be added.
 2. Higher order components don't protect you from prop collision.
-3. Higher order components restrict us to static composition. You can't just use a hoc inside JSX, you have to do so at the edge of a component. This means that our usage of hoc's often determine our component boundaries :(.
+3. Higher order components restrict us to static composition. You can't just use a hoc inside JSX, you have to do so at the edge of a component. This means that our usage of hoc's often determine our component boundaries and vice versa :(.
 
 Now imagine debugging the following:
 
@@ -24,13 +28,15 @@ compose(
 )(MyComponent);
 ```
 
-If you've been a user of recompose like myself and some of the teams I've been working with you won't have to imagine it ;)
+In my experience from writing apps with the pattern - code that uses lots of functional composition can be very hard to penetrate. Having tried this with a bigger teams, I've often had feedback that working with such a code-base is harder than it should be.
 
 ## Render Props to the rescue
 
-You've probably heard of the render prop pattern, either from [Michael Jackson's great article](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) or from using [react-router](https://reacttraining.com/react-router/), [react-motion](https://github.com/chenglou/react-motion) or another of the many libraries which uses the render prop pattern, or from way back when, when react-redux still had a `Connector` component :D.
+You may have heard of the render prop pattern or at least seen it in action. Michael Jackson wrote a [great article](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) on the topic. Even if you haven't heard of it you'll probably have used it with with libraries like [react-router](https://reacttraining.com/react-router/), [react-motion](https://github.com/chenglou/react-motion) or another of the many libraries which uses this pattern.
 
-If you haven't, let's have a quick look at an example, here's one from the readme of [react-responsive](https://github.com/contra/react-responsive#rendering-with-a-child-function)
+What it boils down to is this: callbacks which are used for rendering, passed down to a component as prop - Hence `renderProps`.
+
+__First, here's an example__ to show you how it looks like, taken from the readme of [react-responsive](https://github.com/contra/react-responsive#rendering-with-a-child-function)
 
 ```jsx
 <MediaQuery minDeviceWidth={700}>
@@ -44,13 +50,15 @@ If you haven't, let's have a quick look at an example, here's one from the readm
 </MediaQuery>
 ```
 
-Ok so what's happening here. As you can see we have a react expression inside our MediaQuery component, this contains a function, which gets passed an boolean argument. This is great stuff because both of our 2 problems are defeated:
+Okay so what's happening here. As you can see we have an expression inside our `MediaQuery` component, containing a function. Just by looking at it you can see that this defeats 3 of our problems:
 
-1. Since the state you're using from your higher order components is clearly exposed, you don't have search for this information anymore.
-2. There's a lower likelihood of prop collision (except between the edges of the hoc's themselves).
-3. Although we still have to configure our hoc's statically, we're not confided to the edge of components anymore. We can use them anywhere within our render methods.
+1. The state that the component is responsible for is clearly exposed.
+2. The likelihood of prop collision is much lower (except between the edges of the hoc's themselves).
+3. Place your component anywhere: Although we still have to configure our hoc's statically, we're not confided to the edge of components anymore. We can use them anywhere within our render methods.
 
-### Turning your HOC into a Component with a render prop in one line
+__By the way__ this pattern is actually quite old. Here's an example of [render props](https://gist.github.com/gaearon/b0c060edf413fe23db0a#gistcomment-1410409) from March 2015 by none other then [Dan Abramov](https://twitter.com/dan_abramov), weeks before the first commit of [redux](https://github.com/reactjs/redux) was pushed to github.
+
+### Upgrading your HOC into a Component with a render prop with one line of code
 
 But what if you have a code-base full of higher order components, you can't just ditch everything right?
 
@@ -67,29 +75,33 @@ And now we can use it like so:
 
 ```
 <RenderHoc>
-{({ firstName, lastName }) => (
-  <div>
-    <h1>{firstName}</h1>
-    <h2>{lastName}</h2>
-  </div>
-)}
+  {({ firstName, lastName }) => (
+    <div>
+      <h1>{firstName}</h1>
+      <h2>{lastName}</h2>
+    </div>
+  )}
 </RenderHoc>
 ```
 
-Let's dive straight in with a bunch of real world examples that you can start using right now!!!
+#### That's really all that you need to know about this pattern
+
+You now have everything you need to use your higher order components as normal Components, with the freedom to render them dynamically, anywhere in your render cycle.
+
+Now let's have a look at some examples, taking popular higher order components turning them into normal components with render props:
 
 ### react-redux - connect hoc
 
 Probably the most used hoc in our community.
 
 ```
-const RenderComp = ({ children, ...props}) => children(props);
+const Render = ({ children, ...props}) => children(props);
 
 const mapStateToProps = ({ currentUser: { firstName, lastName } }) => ({ firstName, lastName });
-const ConnectUser = connect(mapStateToProps)(RenderComp);
+const ConnectUser = connect(mapStateToProps)(Render);
 ```
 
-So instead of wrapping your main component you just wrap it in your render prop component and now you can use it anywhere in your render methods:
+So we define our renderProp component and our `mapStateToProps` which we need for the `connect` hoc. Then we wrap our `connect` hoc around our `Render` component and voila, we can use it as a normal component:
 
 ```
 render() {
@@ -118,11 +130,11 @@ const graphqlHoc =  graphql(gql`
   }
 `);
 
-const RenderComp = ({ children, ...props}) => children(props);
-const GraphqlTodos = graphqlHoc(RenderComp);
+const Render = ({ children, ...props}) => children(props);
+const GraphqlTodos = graphqlHoc(Render);
 ```
 
-We used the same simple pattern again, now we can use it as a component in our render method:
+Same exact pattern, wrapping our graphql hoc around our Render component. And now we can use it as a component in our render method:
 
 ```
 render() {
@@ -162,6 +174,7 @@ Now all we do is wrap it around a render prop component as we have done so far:
 ```
 const WithValue = enhance(({ children, ...props }) => children(props));
 ```
+
 Please note: Instead of having a separate component I'm just creating the component definition ( a plain arrow function ) inline, to show you a shorter alternative.
 
 And yet again, we can use it as a component, anywhere we please, and the props that the higher order component produces won't clash with other props:
@@ -170,7 +183,7 @@ And yet again, we can use it as a component, anywhere we please, and the props t
 render() {
   return <div>
     <WithValue>
-    {({ value, onChange, onSubmit }) => (...)}
+      {({ value, onChange, onSubmit }) => (...)}
     </WithValue>
   </div>;
 }
@@ -178,7 +191,7 @@ render() {
 
 ### RxJS and recompose
 
-Here's one final example using RxJS in combination with recompose. Here's the example I took straight from the recompose docs:
+Here's one final example using RxJS in combination with recompose, taken straight [from the docs](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstatehandlers):
 
 ```
 const Counter = componentFromStream(props$ => {
@@ -203,7 +216,7 @@ const Counter = componentFromStream(props$ => {
 })
 ```
 
-Let's not talk about the implementation here, you don't really need to know how RxJS works in order to refactor this component to use a `renderProp`. All one needs to do is change the render method at the lower half of the component definition. Here's how that would look like:
+Let's not talk too much about the implementation here, you don't really need to know how RxJS works in order to refactor this component to use a `renderProp`. All one needs to do is change the render method at the lower half of the component definition. Here's how that would look like:
 
 ```
 const Counter = componentFromStream(props$ => {
@@ -223,7 +236,7 @@ const Counter = componentFromStream(props$ => {
 })
 ```
 
-All I did here is remove all jsx and simply call the children function with the state we need.
+All we did here is remove all jsx from the view and simply call the children prop function with the state we need to expose.
 
 So now what I can do is this:
 
@@ -241,4 +254,4 @@ As you can see, I am now completely in control of the actual presentation. All t
 
 ### Conclusion
 
-I hope this post makes it pretty clear how simple it is to turn your hoc components into render prop components and what power it yields. If you're excited about this please have a look at [Michael Jackson's article](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) as well as his presentation at React Phoenix - [never write another hoc](https://www.youtube.com/watch?v=BcVAq3YFiuc), gotta love that title :D
+I hope this post makes it pretty clear how simple it is to turn your hoc components into render prop components and what power it yields. If you're excited about this as much as me please have a look at [Michael Jackson's article](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) as well as his presentation at React Phoenix - [never write another hoc](https://www.youtube.com/watch?v=BcVAq3YFiuc), gotta love that title :D
