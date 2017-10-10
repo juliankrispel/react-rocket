@@ -1,5 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
+enableEmoji = true
 title = "React.js and Draft.js expert for hire"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 
