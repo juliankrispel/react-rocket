@@ -21,7 +21,6 @@
 
         {{ partial "post-series" . }}
 
-        {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
         <div class="blog-content fs2 tw8">
           {{ .Content }}
         </div>
