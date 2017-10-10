@@ -22,7 +22,11 @@
     <!-- Open Graph -->
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="React Rocket">
-    <meta property="og:image" content="/og-image.png">
+    {{ if .Params.image }}
+      <meta property="og:image" content="{{ .Params.image | absURL }}" />
+    {{ else }}
+      <meta property="og:image" content="/og-image.png">
+    {{ end }}
     <meta property="og:url" content="/">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">

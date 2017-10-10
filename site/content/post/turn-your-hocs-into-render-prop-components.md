@@ -2,6 +2,7 @@
 title: "Upgrade your react.js hoc with renderProps"
 date: 2017-10-09T12:45:00.000Z
 description: In this blog-post you'll learn how easy it is to turn higher order components into normal components with render props.
+image: "https://i.imgflip.com/1xcf7x.jpg"
 ---
 
 ![HOCs as Components](https://i.imgflip.com/1xcf7x.jpg)
