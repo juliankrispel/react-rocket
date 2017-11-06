@@ -27,11 +27,14 @@ body{
   background-size: 2.2rem 2.2rem;
   */
   min-height: 100%;
-  font-family: Guntur, sans-serif;
+  font-family: Roboto, sans-serif;
   color: #333;
 }
 
-.ffh{ font-family: 'Palanquin Dark', sans-serif; }
+.title{
+  font-family: 'Rozha One', serif;
+}
+
 button{
   background: none;
   font-size: inherit;
@@ -545,7 +548,6 @@ ol li{
   margin-left: 1em;
   line-height: 1.5em;
 }
-
 
 .second-clear > *:nth-child(2n+1){
   clear:left;
