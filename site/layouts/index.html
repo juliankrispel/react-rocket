@@ -1,69 +1,42 @@
 {{ partial "head" . }}
-  <div class="dpl7 dpr7 mpl4 mpr4">
-    <h1 class="ffh s4 tal logo mt5 mb6 dib rvl-1">
-      <img width="80px" class="valign-center" alt="React Rocket Logo" src="logo.svg">
+  <div class="dpl7 dpr7 mpl4 mpr4 pb5">
+    <h1 class="ffh s4 tal logo mt5 dib rvl-1">
+      <img width="80px" class="valign-center" alt="React Rocket" src="logo.svg">
     </h1>
-    <div>
-      <h2 class="title mw8 fs6 lh-solid mb3 dib rvl-2">
-        Hi, I'm Julian. <br /> I build web-based and native interfaces with React.js.
-      </h2>
 
-    <div class="df-desk w100 w50">
-      <div class="f1 dpt6">
-        <ul class="df-desk">
-          <li class="f1 tw4 rvl-2 dpr5">
-            <h3 class="fs3 lh3 b">No-bullshit product development</h3>
-            <div class="mt3 mb3 tw3">
-              <p class="fs1 lh3 mt3">My highest priority is to increase the value of your product. Having built products for startups for more than 8 years enables me to ask the right questions to figure out what solution is best for you, even if those questions are inconvenient or result in no business for me at all.</p>
-            </div>
-          </li>
-
-          <li class="f1 tw4 rvl-2 dpr3">
-            <h3 class="fs3 lh3 b">Only fixed price projects.</h3>
-            <div class="mt3 mb3 tw3">
-              <p class="fs1 mb2 lh3"> I got rid of my hourly rate because quite honestly - it sucks for my clients and for myself.</p>
-              <p class="fs1 lh3"> Every project comes with a thorough specification and fixed price tag, so you know what you'll get, exactly at what price. No surprises, no micromanagement.</p>
-            </div>
-          </li>
-
-          <li class="f1 tw4 rvl-2 dpl2">
-            <p class="mw7 fs3 lh-copy mb4 dib rvl-3">
-              I still have some availability in the upcoming months. Get in touch so we can start planning!
-            </p>
-
-            <div class="pb5">
-              <button class="mb3 b lh1 dib fs1 bgp tcw btn p2" onclick="window.drift.api.openChat()" >
-                <em aria-hidden="true" class="mr1 fa fa-comment fs3"></em>
-                Chat with me now
-              </button><br />
-              <a target="_blank" href="https://calendly.com/reactrocket/30minchat" class="mb3 b fs1 bgp lh1 tcw btn v-mid dib p2">
-                <em aria-hidden="true" class="mr1 fa fa-calendar fs2"></em>
-                Book a meeting
-              </a>
-            </div>
-        </ul>
+    <div class="f1 dpt7 df-desk  w100 w50 jcc dpt8 dpb8">
+      <div class="f1 rvl-2 dpr3 tw5">
+        <h2 class="title mw8 fs6 lh-solid mb3 dib rvl-2">
+          <span class="db pb4">I'm Julian 👋</span> I build editors for web apps.
+        </h2>
       </div>
-    </div>
 
+      <div class="f1 tw4 rvl-2 dpl2">
+        <p class="mw7 fs3 lh-copy mb4 dib rvl-3">
+          I still have some availability in the upcoming months. Get in touch so we can start planning!
+        </p>
+
+        <div class="pb2">
+          <button class="mb3 b lh1 dib fs3 tcw btn p3 call-to-action" onclick="window.drift.api.openChat()" >
+            <em aria-hidden="true" class="mr1 fa fa-comment fs3"></em>
+            Message me
+          </button><br />
+        </div>
+
+        <p>
+          <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="mailto:julian@reactrocket.com">
+            <em aria-hidden="true" class="l0 fa fa-envelope fs3"></em>
+          </a>
+          <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://twitter.com/juliandoesstuff"><span class="fa fa-twitter"></span></a>
+          <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://www.linkedin.com/in/julian-krispel-67487a1b"><span class="fa fa-linkedin"></span></a>
+          <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://github.com/juliankrispel"><span class="fa fa-github"></span></a>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="fdc ail center pb6 dpl7 dpr7 pb5  mpl4 mpr4">
     <div class="w100">
-      <div class="df-desk pb5">
-        <div class="dpr5 w100">
-          <ul class="mt3 rvl-2">
-            <li class="mt5 tc">
-              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="mailto:julian@reactrocket.com">
-                <em aria-hidden="true" class="l0 fa fa-envelope fs3"></em>
-              </a>
-              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://twitter.com/juliandoesstuff"><span class="fa fa-twitter"></span></a>
-              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://www.linkedin.com/in/julian-krispel-67487a1b"><span class="fa fa-linkedin"></span></a>
-              <a class="transp-hover icon-link pb1 pt1 lh1 fs3 mr2" href="https://github.com/juliankrispel"><span class="fa fa-github"></span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div>
         {{ partial "blog" . }}
       </div>

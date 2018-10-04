@@ -310,6 +310,7 @@ ul{ list-style: none; }
 /* screen height */
 .sh{ min-height: calc(100vh - 2em); }
 .vam{ vertical-align: middle; }
+.vh100 { height: 100vh; }
 
 .pf{ position: fixed;}
 .pa{ position: absolute;}
@@ -406,6 +407,7 @@ a{
   .df-desk{
     display: flex;
   }
+
   .bl-desk{
     border-left: 1px solid;
   }

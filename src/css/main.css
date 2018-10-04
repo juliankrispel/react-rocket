@@ -35,3 +35,19 @@
 @import './imports/_vertical-align';
 
 
+
+.call-to-action {
+  box-shadow: none;
+  border-radius: 0.1em;
+  color: #f2594b;
+  border: 1px solid #f2594b;
+  background: #fff;
+}
+
+.call-to-action:active, .call-to-action:focus {
+  outline: none;
+}
+
+
+*::-moz-selection { background: #f2594b}
+*::selection { background: #f2594b; }
