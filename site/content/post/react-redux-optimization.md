@@ -88,9 +88,9 @@ const ConnectedC = connect(CompC, ({ c }) => ({ c }));
 
 const BigComponent = () => (
   <div>
-    <ConnectedA a={a} />
-    <ConnectedB b={b} />
-    <ConnectedC c={c} />
+    <ConnectedA />
+    <ConnectedB />
+    <ConnectedC />
   </div>
 );
 ```
