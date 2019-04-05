@@ -1,5 +1,5 @@
 ---
-title: "Draft js interactive content"
+title: "Drawing on canvas inside a Draft js document"
 date: 2019-04-05T16:32:00.000Z
 description: Let's experiment with canvas and draft js and make a note-taking/drawing app
 series: 'learning-draft-js'
