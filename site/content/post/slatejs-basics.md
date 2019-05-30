@@ -1,7 +1,7 @@
 ---
 title: "Build a rich text editor with slatejs and react"
 date: 2019-05-30T08:41:00.000Z
-description: Learn the basics of using slatejs: Setup, state management, key press handling and styling text ranges.
+description: Learn the basics of using slatejs - Setup, state management, key press handling and styling text ranges.
 ---
 
 The outcome of this lesson can [be seen here on codesandbox](https://codesandbox.io/s/github/juliankrispel/slate-highlight-lesson) or [here on github](https://github.com/juliankrispel/slate-highlight-lesson)

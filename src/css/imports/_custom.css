@@ -502,16 +502,22 @@ a{
 pre{
   max-width: 100%;
   overflow-x: scroll;
-  font-size: 1.3rem;
-  background: #fff;
-  padding: 1em;
-  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  background: #000;
+  color: #fff;
+  border-radius: 3px;
+  padding: .7em;
+  border: none;
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
   width: 100%;
+}
+
+pre, ul {
+  margin-bottom: 3em !important;
 }
 
 .blog-content p > code{
@@ -532,7 +538,7 @@ pre{
 }
 
 .blog-content ul li{
-  margin-bottom: .3em;
+  margin-bottom: 0em;
   padding-left: .5em;
 }
 
