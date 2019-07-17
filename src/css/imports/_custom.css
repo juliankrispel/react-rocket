@@ -512,7 +512,14 @@ pre {
   width: 100%;
 }
 
-p code {
+p code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+a code,
+li code {
   background: #f0f0f0;
   padding: .2rem 0.5rem;
 }
