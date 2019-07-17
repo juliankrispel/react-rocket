@@ -499,16 +499,22 @@ a{
   font-size: 1.5em;
 }
 
+
+
 pre {
   max-width: 100%;
   overflow-x: scroll;
   font-size: 1.2rem;
-  background: #696969;
-  color: #fff;
+  background: #f0f0f0;
   padding: 1em;
   font-weight: normal;
   border: none;
   width: 100%;
+}
+
+p code {
+  background: #f0f0f0;
+  padding: .2rem 0.5rem;
 }
 
 .blog-content img{
