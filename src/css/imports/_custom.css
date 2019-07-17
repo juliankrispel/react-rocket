@@ -503,10 +503,10 @@ pre{
   max-width: 100%;
   overflow-x: scroll;
   font-size: 1.2rem;
-  background: #000;
+  background: #696969;
   color: #fff;
-  border-radius: 3px;
-  padding: .7em;
+  padding: 1em;
+  font-weight: normal;
   border: none;
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -518,12 +518,6 @@ pre{
 
 pre, ul {
   margin-bottom: 3em !important;
-}
-
-.blog-content p > code{
-  background: #fff;
-  padding: .2em .4em;
-  border: 1px solid #ccc;
 }
 
 .blog-content img{
