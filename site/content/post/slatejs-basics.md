@@ -30,7 +30,7 @@ Here are the packages we need:
 - `slate-plain-serializer` - this library let's us turn a string into the document model
 
 ```bash
-npm install --save slate slate-react immutable slatet-plain-serializer
+npm install --save slate slate-react immutable slate-plain-serializer
 ```
 
 Import the Editor component
